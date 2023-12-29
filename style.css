@@ -1,0 +1,42 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+body {
+  background-color: #ccc;
+}
+h1 {
+  text-align: center;
+  margin: 20px;
+  font-size: 3rem;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+  padding: 100px;
+}
+.settings {
+  background-color: darkgray;
+  border-radius: 10px;
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.grid {
+  width: 500px;
+  height: 500px;
+  background-color: white;
+  border-radius: 5px;
+  border: 3px solid darkgray;
+}
+.btn {
+  margin: 16px;
+}
