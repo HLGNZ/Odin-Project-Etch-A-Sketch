@@ -30,6 +30,7 @@ h1 {
   align-items: center;
 }
 .grid {
+  display: grid;
   width: 500px;
   height: 500px;
   background-color: white;
@@ -49,4 +50,10 @@ button {
   font-size: inherit;
   cursor: pointer;
   background-color: none;
+}
+.grid-element {
+  border: 1px solid;
+}
+.add-color {
+  background-color: black;
 }
