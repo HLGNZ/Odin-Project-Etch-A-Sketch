@@ -1,9 +1,11 @@
 let colorMode = document.querySelector("#color-mode")
+let eraserBtn = document.querySelector("#eraser")
+let clearBtn = document.querySelector("#clear")
 let grid = document.querySelector(".grid")
 
-getGridValue()
+setUpGrid()
 
-function getGridValue() {
+function setUpGrid() {
   colorMode.addEventListener("click", (gridValue) => {
     gridValue = prompt("Type a number between 1 and 64")
     if (Number(gridValue) <= 64) {
