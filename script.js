@@ -2,7 +2,16 @@ let colorMode = document.querySelector("#color-mode")
 let eraserBtn = document.querySelector("#eraser")
 let clearBtn = document.querySelector("#clear")
 let grid = document.querySelector(".grid")
-
+const buttons = document.querySelectorAll("button")
+function activeBtns() {
+  buttons.forEach((button) => {
+    button.addEventListener("click", function () {
+      buttons.forEach((btn) => btn.classList.remove("active"))
+      this.classList.add("active")
+    })
+  })
+}
+activeBtns()
 setUpGrid()
 
 function setUpGrid() {
