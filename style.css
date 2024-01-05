@@ -54,9 +54,7 @@ button {
 .grid-element {
   border: 1px solid;
 }
-.add-color {
-  background-color: black;
-}
+
 .active {
   background-color: black;
   color: white;
