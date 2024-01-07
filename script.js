@@ -1,14 +1,14 @@
-let color = document.querySelector("#color-pick")
-let colorMode = document.querySelector("#color-mode")
-let eraserBtn = document.querySelector("#eraser")
-let clearBtn = document.querySelector("#clear")
+let color = document.querySelector(".color-pick")
+let colorMode = document.querySelector(".color-mode")
+let rainbowMode = document.querySelector(".rainbow-mode")
+let eraserBtn = document.querySelector(".eraser")
+let clearBtn = document.querySelector(".clear")
 let grid = document.querySelector(".grid")
-let gridRange = document.querySelector("#range")
+let gridRange = document.querySelector(".range")
 let gridText = document.querySelector(".grid-text")
 const buttons = document.querySelectorAll("button")
 
 // made active effect when press on buttons turn buttons to another color.
-
 activeBtns()
 setUpGrid()
 //this function setup the grid on the page
@@ -31,6 +31,15 @@ function setUpGrid() {
         clearBtn.addEventListener("click", () => {
           gridElement.style.backgroundColor = ""
         })
+        rainbowMode.addEventListener("click", () => {
+          const randomR = Math.floor(Math.random() * 256)
+          const randomG = Math.floor(Math.random() * 256)
+          const randomB = Math.floor(Math.random() * 256)
+          gridElement.addEventListener("mouseenter", () => {
+            gridElement.style.backgroundColor = `rgb(${randomR},${randomG},${randomB})`
+          })
+        })
+
         eraserBtn.addEventListener("click", () => {
           gridElement.addEventListener("mouseenter", () => {
             gridElement.style.backgroundColor = "white"
